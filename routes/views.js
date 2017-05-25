@@ -5,7 +5,7 @@ module.exports = (function() {
 	var viewsRoute = express.Router();
 
 	viewsRoute.get('/', function(req, res) {
-		res.render('index');
+		res.render('templates/home');
 	});
 
 	viewsRoute.get('/home', function(req,res) {
