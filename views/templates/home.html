@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css"></link>
+  </head>
+  <body ng-app="earnfrontend">
+    <div>
+      <h2>This is home</h2>
+      <div ng-controller="ListController">
+        <form name="myListForm">
+          New List Item : <input type="text" name="input" ng-model="listitem" required ng-trim="false">
+          <span class="error" ng-hide="myListForm.input.$error.required">
+            <button ng-click="sendToServer()">Send</button>
+          </span>
+        </form>
+        <li ng-repeat="item in items">{{item}}</li>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+  <script type="text/javascript" src="javascripts/module.js"></script>
+</html>
